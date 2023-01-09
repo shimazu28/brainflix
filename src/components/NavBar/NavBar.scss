@@ -1,0 +1,36 @@
+@use "../../styles/partials/resets";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/defaul-styling";
+
+
+.nav{
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @include mobile-padding;
+
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding:1rem 0rem;
+    }
+    @include desktop {
+        max-width: 102rem;
+        margin: 0rem auto;
+    }
+
+    &__logo {
+        margin: 1rem;
+        max-height: 2.5rem;
+        
+        @include tablet {
+            margin-top: 2.2rem;
+        }
+    
+    }
+
+}
