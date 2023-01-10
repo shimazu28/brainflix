@@ -1,0 +1,109 @@
+@use "../../styles/partials/resets";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/defaul-styling";
+
+.comment-main {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+  
+    @include tablet {
+    }
+    &__avatar {
+      width: 3.6rem;
+      height: 3.6rem;
+      border-radius: 50%;
+      vertical-align: bottom;
+      position: relative;
+      top: 1.7rem;
+      @include tablet {
+        width: 4.8rem;
+        height: 4.8rem;
+      }
+    }
+  &__tablet-cont{
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+    }
+  }
+    &__name {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        font-weight: 700;
+        color: $primary-silver;
+    }
+    &__form {
+      @include tablet {
+      display: flex;
+      flex-direction: row;
+    
+      }
+    }
+
+
+    &__box {
+      width: 70vw;
+      padding: 1rem;
+      height: 8rem;
+      border-radius: 4px;
+      border: 1px solid;
+      border-color: $primary-silver;
+      background-color: $secondary-alabaster;
+      margin-bottom: 2rem;
+      font-family: inherit;
+      resize: none;
+      &:focus {
+        border: 2px solid $primary-blue;
+        outline-width: 0;
+      }
+      @include tablet {
+        width: 53rem;
+        height: 4.8rem;
+      }
+    }
+  
+
+    &__button {
+        margin-top: 2rem;
+        height: 4rem;
+        width: 70vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8rem;
+        text-transform: uppercase;
+        background-color: $primary-blue;
+        border-radius: 4px;
+        color: $primary-white;
+        border: none;
+      @include tablet {
+        width: 15rem;
+        height: 4.8rem;
+        align-self: flex-end;
+        font-size: 1.7rem;
+      }
+  
+      &:hover {
+        background-color: $secondary-darkblue;
+      }
+    }
+  }
+
+.comment-example {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+}

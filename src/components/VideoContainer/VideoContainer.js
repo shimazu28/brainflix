@@ -16,7 +16,7 @@ function VideoContainer(props) {
     
     return (
        <aside className="aside-video">
-        <h4 className="aside-video__title">next videos</h4>
+        <h4 className="aside-video__next-title">next videos</h4>
        {videoList}
        </aside>
     )

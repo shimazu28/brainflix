@@ -1,0 +1,26 @@
+@use "../../styles/partials/resets";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/defaul-styling";
+
+.aside-video {
+    &__video {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        margin-bottom: 0.5rem;
+        @include tablet {
+            margin-bottom: 1rem;
+        }
+    }
+    &__img {
+        width: 10rem;
+        height: 6rem;
+        border-radius: 4px;
+    }
+    &__title, &__by {
+        line-height: 1rem;
+    }
+}

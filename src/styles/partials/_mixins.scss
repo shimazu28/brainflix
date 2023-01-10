@@ -12,6 +12,8 @@
   }
 }
 
+
+
 @mixin reset-list {
   list-style-type: none;
   margin: 0rem;
@@ -23,9 +25,9 @@
 }
 
 @mixin tablet-padding {
-  padding: 3.6rem 3.6rem 4.8rem 3.6rem;
+  padding: 2.4rem 2.4rem 3.6rem 2.4rem;
 }
 
 @mixin desktop-padding {
-  padding: 5.6rem 5.6rem 9.6rem 5.6rem;
+  padding: 2.4rem 2.4rem 3.6rem 2.4rem;
 }

@@ -14,7 +14,6 @@ function Comments(props) {
     return `${month}/${day}/${year}`;
   }
 
-  //uuid wasn't used, so I used index
   let commentsForm = props.data.comments
   .map((mapComment, index) => {
     return (
@@ -55,16 +54,19 @@ function Comments(props) {
         <div className="comment-main">
           <img className="comment-main__avatar" src={ava} alt="avatar-Mohan" />
           <form className="comment-main__form">
+            <div className="comment-main__tablet-cont">
             <label className="comment-main__name" htmlFor="name">
               join the conversation
             </label>
-            <input
+            <textarea
               className="comment-main__box"
               placeholder="Add a new comment"
               type="text"
               id="comment"
               name="comment"
             />
+            </div>
+            <div className="comment-main__tablet-cont">
             <button className="comment-main__button" type="submit">
               <img
                 src={commentIcon}
@@ -73,11 +75,12 @@ function Comments(props) {
               />
               comment
             </button>
+            </div>
           </form>
-          <div className="comment-main__comments-container">
+          </div>
+          <div className="comment-example">
           {commentsForm}
           </div>
-        </div>
       </div>
     </div>
   );

@@ -5,8 +5,9 @@ import './NavBar.scss'
 function NavBar() {
     return (
         <nav className="nav">
-            <img className="nav_logo" src={logo} alt='brain-logo'/>
+            <img className="nav__logo" src={logo} alt='brain-logo'/>
             <SearchNav/>
+            
         </nav>
     )
 }

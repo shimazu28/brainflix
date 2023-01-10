@@ -2,9 +2,9 @@ import './VideoMain.scss'
 
 function VideoMain(props) {
     return (
-        <div className='video-main'>
+        <div className='video-hero'>
         <video
-            className='video-main__player'
+            className='video-hero__player'
             poster={props.data.image}
             controls>
         </video>

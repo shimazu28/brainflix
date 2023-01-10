@@ -1,0 +1,62 @@
+@use "../../styles/partials/resets";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/defaul-styling";
+
+
+.comment-example {
+    &__container {
+      border-bottom: 1px solid $secondary-mercury;
+      border-bottom: 1px solid #e1e1e1;
+      width: 100%;
+      @include tablet {
+      }
+    }
+    &__top-container {
+      display: flex;
+      position: relative;
+    }
+    &__avatar {
+      width: 3.6rem;
+      height: 3.6rem;
+      border-radius: 50%;
+      background-color: $secondary-mercury;
+      position: relative;
+      top: 1.5rem;
+      left: 0.5rem;
+      @include tablet {
+      }
+    }
+    &__top-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 0rem 0rem 1rem 2rem;
+      margin-top: -4rem;
+    }
+    &__full-name {
+      color: $primary-black;
+      padding: 1.75rem 1rem 0rem 3.9375rem;
+      margin: 0rem;
+      font-weight: 700;
+    }
+    &__bottom-container {
+      padding: 0rem 5rem 0rem 6rem;
+      margin-top: -2.5rem;
+      color: $primary-black;
+      @include tablet {
+      }
+      &__statement {
+        @include tablet {
+          width: 29rem;
+          margin: 0rem;
+          padding: 1rem 0rem 1.5rem 0rem;
+        }
+      }
+    }
+
+    &__date {
+      color: $secondary-mercury;
+      font-weight: 400;
+    }
+  }
