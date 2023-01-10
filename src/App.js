@@ -1,12 +1,12 @@
-import './App.scss';
-import NavBar from './components/NavBar';
-import Main from './components/Main';
+import "./App.scss";
+import NavBar from "./components/NavBar";
+import Main from "./components/Main";
 
 function App() {
   return (
     <>
-      <NavBar/>
-      <Main/>
+      <NavBar />
+      <Main />
     </>
   );
 }

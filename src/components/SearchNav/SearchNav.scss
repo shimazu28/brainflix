@@ -5,21 +5,20 @@
 @use "../../styles/partials/defaul-styling";
 
 .search-form {
+  @include tablet {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
     @include tablet {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        gap: 2rem;
+      display: flex;
     }
-    &__container {
-        display: flex;
-        justify-content: space-between;
-        @include tablet {
-            display: flex;
-        }
-        
-    }
-    &__input-container {
+  }
+  &__input-container {
     border: 1px solid $secondary-mercury;
     border-radius: 4px;
     display: flex;
@@ -27,27 +26,27 @@
     padding: 1rem;
     background-color: $secondary-alabaster;
     @include tablet {
-        width: 240px;
+      width: 240px;
     }
   }
-    &__ava {
+  &__ava {
     border-radius: 50%;
     width: 3.6rem;
     height: 3.6rem;
     @include tablet {
-        display: none;
+      display: none;
     }
   }
   &__ava-tablet {
     display: none;
     @include tablet {
-        border-radius: 50%;
-        width: 4rem;
-        height: 4rem;
-        display: block;
+      border-radius: 50%;
+      width: 4rem;
+      height: 4rem;
+      display: block;
     }
   }
-    &__input {
+  &__input {
     border: none;
     display: flex;
     justify-content: center;
@@ -55,7 +54,6 @@
     font-family: inherit;
     color: $primary-black;
     background-color: inherit;
-    
   }
 
   &__button {
@@ -72,21 +70,20 @@
     color: $primary-white;
     border: none;
     @include tablet {
-        margin-top: 0rem;
-        display: flex;
-        justify-content: flex-start;
-        gap: 1rem;
-        width: 15rem;
-        
+      margin-top: 0rem;
+      display: flex;
+      justify-content: flex-start;
+      gap: 1rem;
+      width: 15rem;
     }
-    
   }
 
   @include tablet {
-    &__tablet-size-container{
-        display: flex;
-        gap: 2rem;
-    }}
+    &__tablet-size-container {
+      display: flex;
+      gap: 2rem;
+    }
+  }
   &__upload {
     margin-right: 0.5rem;
     vertical-align: sub;

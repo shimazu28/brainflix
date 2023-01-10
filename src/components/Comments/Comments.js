@@ -14,15 +14,14 @@ function Comments(props) {
     return `${month}/${day}/${year}`;
   }
 
-  let commentsForm = props.data.comments
-  .map((mapComment, index) => {
+  let commentsForm = props.data.comments.map((mapComment, index) => {
     return (
-        <CommentForm
-          key={index}
-          comment={mapComment.comment}
-          time={mapComment.timestamp}
-          name={mapComment.name}
-        />
+      <CommentForm
+        key={index}
+        comment={mapComment.comment}
+        time={mapComment.timestamp}
+        name={mapComment.name}
+      />
     );
   });
   return (
@@ -30,19 +29,27 @@ function Comments(props) {
       <div className="video-info__container">
         <h1 className="video-info__title">{props.data.title}</h1>
         <div className="video-info__info">
-          <div className="video-info__info__authorDate">
-            <h2 className="video-info__info__author">By {props.data.channel}</h2>
-            <p className="video-info__info__date">
+          <div className="video-info__author-container">
+            <h2 className="video-info__author">By {props.data.channel}</h2>
+            <p className="video-info__date">
               {formatDate(props.data.timestamp)}
             </p>
           </div>
-          <div className="video-info__viewsLikes">
-            <div className="video-info__container">
-              <img src={viewsIcon} className="video-info__icon " alt="icon-view"></img>
+          <div className="video-info__view-container">
+            <div className="video-info__container-icon">
+              <img
+                src={viewsIcon}
+                className="video-info__icon "
+                alt="icon-view"
+              ></img>
               <p className="video-info__view">{props.data.views}</p>
             </div>
-            <div className="video-info__container">
-              <img src={likesIcon} className="video-info__icon left" alt="icon-like"></img>
+            <div className="video-info__container-icon">
+              <img
+                src={likesIcon}
+                className="video-info__icon"
+                alt="icon-like"
+              ></img>
               <p className="video-info__likes">{props.data.likes}</p>
             </div>
           </div>
@@ -55,32 +62,30 @@ function Comments(props) {
           <img className="comment-main__avatar" src={ava} alt="avatar-Mohan" />
           <form className="comment-main__form">
             <div className="comment-main__tablet-cont">
-            <label className="comment-main__name" htmlFor="name">
-              join the conversation
-            </label>
-            <textarea
-              className="comment-main__box"
-              placeholder="Add a new comment"
-              type="text"
-              id="comment"
-              name="comment"
-            />
+              <label className="comment-main__name" htmlFor="name">
+                join the conversation
+              </label>
+              <textarea
+                className="comment-main__box"
+                placeholder="Add a new comment"
+                type="text"
+                id="comment"
+                name="comment"
+              />
             </div>
             <div className="comment-main__tablet-cont">
-            <button className="comment-main__button" type="submit">
-              <img
-                src={commentIcon}
-                className="comment-main__upload"
-                alt="upload-icon"
-              />
-              comment
-            </button>
+              <button className="comment-main__button" type="submit">
+                <img
+                  src={commentIcon}
+                  className="comment-main__upload"
+                  alt="upload-icon"
+                />
+                comment
+              </button>
             </div>
           </form>
-          </div>
-          <div className="comment-example">
-          {commentsForm}
-          </div>
+        </div>
+        <div className="comment-example">{commentsForm}</div>
       </div>
     </div>
   );

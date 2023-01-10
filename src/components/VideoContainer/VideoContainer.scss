@@ -5,13 +5,17 @@
 @use "../../styles/partials/defaul-styling";
 
 .aside-video {
-    @include mobile-padding;
-    @include tablet {
-
-    }
-    &__next-title {
-        text-transform: uppercase;
-        color: $primary-silver;
-        font-weight: 700;
-    }
+  @include mobile-padding;
+  @include tablet {
+    padding: 3.6rem 2.4rem 2.4rem 2.4rem;
+  }
+  @include desktop {
+    padding: 3.6rem 2.4rem 2.4rem 2.4rem;
+    width: 60%;
+  }
+  &__next-title {
+    text-transform: uppercase;
+    color: $primary-silver;
+    font-weight: 700;
+  }
 }
