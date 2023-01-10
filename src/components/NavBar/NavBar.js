@@ -1,5 +1,5 @@
 import SearchNav from "../SearchNav";
-import logo from "../../assets/images/logo/brainFlix-logo.svg";
+import logo from "../../assets/images/logo/BrainFlix-logo.svg";
 import "./NavBar.scss";
 
 function NavBar() {
