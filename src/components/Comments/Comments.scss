@@ -17,6 +17,11 @@
     @include desktop {
       border-right: 1px solid $secondary-mercury;
     }
+  &__about {
+    @include desktop {
+      padding-right: 1rem;
+    }
+  }
   }
   &__title {
     border-bottom: 1px solid $secondary-mercury;
@@ -50,6 +55,7 @@
     @include tablet {
       display: flex;
       gap: 2rem;
+      padding-right: 1rem;
     }
   }
 }
