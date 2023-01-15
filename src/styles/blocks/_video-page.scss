@@ -1,0 +1,5 @@
+.video-page__container {
+  @include desktop {
+    display: flex;
+  }
+}

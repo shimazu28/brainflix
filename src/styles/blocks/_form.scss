@@ -1,0 +1,137 @@
+.form {
+  position: relative;
+
+  &--search::before {
+    content: "";
+    position: absolute;
+    left: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background-image: url("../../assets/images/icons/search.svg");
+  }
+
+  @include tablet {
+    &--search::before {
+      left: 1.6rem;
+    }
+  }
+}
+
+.form__element {
+  &:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+
+  @include tablet {
+    &:not(:last-child) {
+      margin-bottom: 2.4rem;
+    }
+  }
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: $silver;
+
+  &--file {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.form__field {
+  min-height: 36px;
+  height: 36px;
+  font-size: 1.4rem;
+  min-width: 240px;
+  max-width: 100%;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid $mercury;
+  padding: 1.2rem;
+  background-color: $alabaster;
+
+  &:focus {
+    outline: none;
+    border: 2px solid $blue;
+  }
+
+  &[type="search"] {
+    padding-left: 4.2rem;
+  }
+
+  &--error {
+    border: 1px solid $error;
+  }
+
+  &--text {
+    resize: none;
+    min-height: 120px;
+    margin-bottom: 1.6rem;
+  }
+
+  @include tablet {
+    min-height: 40px;
+    padding: 1.6rem;
+
+    &[type="search"] {
+      padding-left: 4.4rem;
+    }
+
+    &--text {
+      display: flex;
+      resize: none;
+      min-height: 40px;
+      margin-bottom: 0;
+      padding-top: 1rem;
+      flex-grow: 1;
+    }
+  }
+}
+
+.form__submit {
+  @include tablet {
+    width: auto;
+  }
+}
+
+.form__image {
+  background-color: $mercury;
+  border-radius: 4px;
+  object-fit: cover;
+  margin-top: 0.4rem;
+}
+
+.form__buttons {
+  display: flex;
+  flex-direction: column;
+
+  &>*:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+
+  @include tablet {
+    padding-top: 2.4rem;
+    border-top: 1px solid $mercury;
+    flex-direction: row-reverse;
+
+    &>* {
+      width: auto;
+    }
+
+    &>*:not(:last-child) {
+      margin-bottom: 0;
+      margin-left: 2.4rem;
+    }
+  }
+
+  @include desktop {
+    width: 100%;
+  }
+}

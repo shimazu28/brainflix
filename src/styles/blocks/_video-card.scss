@@ -1,0 +1,40 @@
+.video-card {
+  display: flex;
+}
+
+.video-card__poster {
+  border-radius: 4px;
+  object-fit: cover;
+  margin-right: 1.6rem;
+  width: 120px;
+  height: 70px;
+  min-width: 120px;
+  min-height: 70px;
+  max-width: 120px;
+  max-height: 70px;
+}
+
+.video-card__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  max-width: 200px;
+
+  span {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  small {
+    display: block;
+    font-weight: normal;
+    font-size: 1.4rem;
+  }
+
+  @include tablet {
+    span {
+      font-size: 1.4rem;
+    }
+  }
+}

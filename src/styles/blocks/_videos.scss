@@ -1,0 +1,36 @@
+.videos {
+  padding-bottom: 2.4rem;
+
+  @include tablet {
+    padding-bottom: 3.2rem;
+  }
+
+  @include desktop {
+    padding-bottom: 4rem;
+  }
+}
+
+.videos__title {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: $silver;
+  margin: 1.6rem 0;
+
+  @include tablet {
+    margin: 2.4rem 0;
+  }
+}
+
+.videos__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.videos__item {
+  display: flex;
+
+  &:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+}

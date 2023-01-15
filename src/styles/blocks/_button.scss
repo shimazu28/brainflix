@@ -1,0 +1,36 @@
+.button {
+  font-size: 1.4rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 100%;
+  border-radius: 4px;
+  text-transform: uppercase;
+  color: $basic-white;
+  border: none;
+  background-color: $blue;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $darkblue;
+  }
+
+  &--inverse {
+    background-color: transparent;
+    color: $blue;
+  }
+
+  @include tablet {
+    min-width: 15rem;
+    padding: 0 3.2rem;
+  }
+}
+
+.button__icon {
+  position: absolute;
+  left: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+}

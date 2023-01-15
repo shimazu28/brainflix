@@ -1,0 +1,57 @@
+.comments-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comments-list__item {
+  padding: 1.6rem 0;
+  border-bottom: 1px solid $mercury;
+  display: flex;
+
+  @include desktop {
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.comments-list__item-avatar {
+  margin-right: 1.6rem;
+  background-color: $mercury;
+
+  @include tablet {
+    margin-right: 2.4rem;
+  }
+}
+
+.comments-list__item-right {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include desktop {
+    padding-right: 2.4rem;
+  }
+}
+
+.comments-list__item-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0;
+  margin-right: auto;
+
+  @include tablet {
+    font-size: 1.4rem;
+  }
+}
+
+.comments-list__item-time {
+  color: $silver;
+  font-size: 1.4rem;
+}
+
+.comments-list__item-comment {
+  font-size: 1.4rem;
+  margin: 0;
+  margin-top: 1.6rem;
+}
