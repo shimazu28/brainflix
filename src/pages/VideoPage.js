@@ -1,6 +1,6 @@
-import VideoPlayer from '../components/VideoPlayer';
-import VideoDetails from '../components/VideoDetails';
-import VideoList from '../components/VideoList';
+import VideoPlayer from '../components/VideoPlayer/VideoPlayer';
+import VideoDetails from '../components/VideoDetails/VideoDetails';
+import VideoList from '../components/VideoList/VideoList';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';

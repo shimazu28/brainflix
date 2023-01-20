@@ -1,5 +1,5 @@
-import CommentsForm from './CommentsForm';
-import CommentsList from './CommentsList';
+import CommentsForm from '../CommentsForm/CommentsForm';
+import CommentsList from '../CommentsList/CommentsList';
 
 function Comments({ comments }) {
   return (

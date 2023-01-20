@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { AppRoute } from '../const';
-import mainLogo from '../assets/images/main-logo.svg';
+import { AppRoute } from '../../const';
+import mainLogo from '../../assets/images/main-logo.svg';
 
 function MainLogo() {
   return (

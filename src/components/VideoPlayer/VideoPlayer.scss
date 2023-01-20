@@ -3,10 +3,11 @@
   justify-content: center;
   background-color: $basic-black;
   width: 100%;
-}
 
-.video__player {
+
+&__player {
   width: 850px;
   max-width: 100%;
   aspect-ratio: 16 / 9;
+}
 }

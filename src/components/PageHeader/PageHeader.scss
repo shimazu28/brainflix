@@ -7,9 +7,9 @@
   @include tablet {
     align-items: center;
   }
-}
 
-.page-header__logo {
+
+&__logo {
   display: flex;
   justify-content: center;
   margin-bottom: 1.6rem;
@@ -22,7 +22,7 @@
   }
 }
 
-.page-header__search {
+&__search {
   flex-grow: 1;
 
   @include tablet {
@@ -31,7 +31,7 @@
   }
 }
 
-.page-header__user-avatar {
+&__user-avatar {
   margin-left: 1.6rem;
 
   @include tablet {
@@ -40,7 +40,7 @@
   }
 }
 
-.page-header__button {
+&__button {
   margin-top: 1.6rem;
   font-size: 1.4rem;
 
@@ -48,4 +48,5 @@
     width: auto;
     margin-top: 0;
   }
+}
 }

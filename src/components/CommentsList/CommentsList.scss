@@ -2,9 +2,9 @@
   list-style: none;
   padding: 0;
   margin: 0;
-}
 
-.comments-list__item {
+
+&__item {
   padding: 1.6rem 0;
   border-bottom: 1px solid $mercury;
   display: flex;
@@ -16,7 +16,7 @@
   }
 }
 
-.comments-list__item-avatar {
+&__item-avatar {
   margin-right: 1.6rem;
   background-color: $mercury;
 
@@ -25,7 +25,7 @@
   }
 }
 
-.comments-list__item-right {
+&__item-right {
   display: flex;
   flex-wrap: wrap;
 
@@ -34,7 +34,7 @@
   }
 }
 
-.comments-list__item-title {
+&__item-title {
   font-size: 1.3rem;
   font-weight: bold;
   margin: 0;
@@ -45,13 +45,14 @@
   }
 }
 
-.comments-list__item-time {
+&__item-time {
   color: $silver;
   font-size: 1.4rem;
 }
 
-.comments-list__item-comment {
+&__item-comment {
   font-size: 1.4rem;
   margin: 0;
   margin-top: 1.6rem;
+}
 }

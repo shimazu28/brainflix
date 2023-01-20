@@ -1,4 +1,4 @@
-import VideoCard from "./VideoCard";
+import VideoCard from "../VideoCard/VideoCard";
 
 function VideoList({ videos, currentVideo }) {
   return (

@@ -5,7 +5,8 @@ function CommentsList({ comments }) {
     <ul className="comments-list">
       {comments?.map((comment) => (
         <li key={comment.id} className="comments-list__item">
-          <img className="comments-list__item-avatar user-avatar" alt="" />
+          {/*I'm gettin image not preview if I fill alt. Also, if I delete, I'm getting warning. So I leave it empty */}
+          <img className="comments-list__item-avatar user-avatar" alt=""/>
 
           <div className="comments-list__item-right">
             <h3 className="comments-list__item-title">{comment.name}</h3>

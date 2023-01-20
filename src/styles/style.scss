@@ -2,18 +2,18 @@
 @import "partials/_variables.scss";
 @import "partials/_mixins.scss";
 @import "partials/_global.scss";
+@import "partials/_page.scss";
+@import "partials/_button.scss";
+@import "partials/_form.scss";
+@import "partials/_user-avatar.scss";
+@import "partials/_upload-page.scss";
+@import 'partials/video-page';
 
-@import "blocks/_page.scss";
-@import "blocks/_button.scss";
-@import "blocks/_main-logo.scss";
-@import "blocks/_form.scss";
-@import "blocks/_user-avatar.scss";
-@import "blocks/_page-header.scss";
-@import "blocks/_video.scss";
-@import "blocks/_video-page.scss";
-@import "blocks/_video-details.scss";
-@import "blocks/_comments.scss";
-@import "blocks/_comments-list.scss";
-@import "blocks/_videos.scss";
-@import "blocks/_upload-page.scss";
-@import "blocks/_video-card.scss";
+@import '../components/Comments/Comments.scss';
+@import '../components/CommentsList/CommentsList.scss';
+@import '../components/PageHeader/PageHeader.scss';
+@import '../components/VideoCard/VideoCard.scss';
+@import '../components/VideoDetails/VideoDetails.scss';
+@import '../components/VideoList/VideoList.scss';
+@import '../components/VideoPlayer/VideoPlayer.scss'
+

@@ -1,8 +1,8 @@
 .video-card {
   display: flex;
-}
 
-.video-card__poster {
+
+&__poster {
   border-radius: 4px;
   object-fit: cover;
   margin-right: 1.6rem;
@@ -14,7 +14,7 @@
   max-height: 70px;
 }
 
-.video-card__title {
+&__title {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -37,4 +37,5 @@
       font-size: 1.4rem;
     }
   }
+}
 }

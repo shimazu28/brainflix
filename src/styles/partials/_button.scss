@@ -26,11 +26,13 @@
     min-width: 15rem;
     padding: 0 3.2rem;
   }
-}
 
-.button__icon {
+
+&__icon {
   position: absolute;
   left: 0.8rem;
   top: 50%;
   transform: translateY(-50%);
+}
+
 }

@@ -13,6 +13,12 @@ function UploadPage() {
     toast.success('Video published successfully!');
   };
 
+  const handleFormCancel = (evt) => {
+    evt.preventDefault();
+
+    navigate(AppRoute.HOME);
+  };
+
   return (
     <main className="upload-page">
       <div className="container">
@@ -27,10 +33,8 @@ function UploadPage() {
                 name="video"
               />
               <img className="form__image"
-                width={360}
-                height={210}
                 src={uploadVideoPreview}
-                alt=""
+                alt="upload pic"
               />
             </label>
           </div>
@@ -66,7 +70,7 @@ function UploadPage() {
               </svg>
               Publish
             </button>
-            <button className="form__reset button button--inverse" type="reset">Cancel</button>
+            <button className="form__reset button button--inverse" type="reset" onClick={handleFormCancel}>Cancel</button>
           </div>
         </form>
       </div>

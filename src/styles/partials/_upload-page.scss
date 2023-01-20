@@ -1,8 +1,8 @@
 .upload-page {
   border-top: 1px solid $mercury;
-}
 
-.upload-page__title {
+
+&__title {
   font-size: 2.4rem;
   font-weight: bold;
   margin: 0;
@@ -16,7 +16,9 @@
   }
 }
 
-.upload-page__form {
+
+
+&__form {
   @include tablet {
     padding-top: 2.4rem;
     border-top: 1px solid $mercury;
@@ -28,7 +30,7 @@
   }
 }
 
-.upload-page__form-right {
+&__form-right {
   @include tablet {
     padding-bottom: 2.4rem;
   }
@@ -47,7 +49,7 @@
   }
 }
 
-.upload-page__description {
+&__description {
   @include tablet {
     min-height: 80px;
   }
@@ -55,4 +57,5 @@
   @include desktop {
     flex-grow: 1;
   }
+}
 }

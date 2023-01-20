@@ -3,9 +3,10 @@
   line-height: 1.3;
   color: $brand-black;
   font-family: "AvenirNext"; 
-}
 
-.page__body {
+
+&__body {
   margin: 0;
   font-size: 1.6rem;
+}
 }

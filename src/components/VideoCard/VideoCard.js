@@ -1,5 +1,5 @@
 import { generatePath, Link } from 'react-router-dom';
-import { AppRoute } from '../const';
+import { AppRoute } from '../../const';
 
 function VideoCard({ video }) {
   return (

@@ -1,4 +1,4 @@
-import VideoPage from '../pages/VideoPage';
+import VideoPage from './VideoPage';
 
 function HomePage() {
   return (

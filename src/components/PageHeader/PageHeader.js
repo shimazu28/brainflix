@@ -1,8 +1,8 @@
-import MainLogo from './MainLogo';
-import SearchForm from './SearchForm';
-import userAvatar from '../assets/images/user-avatar.jpg'
+import MainLogo from '../MainLogo/MainLogo';
+import SearchForm from '../SearchForm/SearchForm';
+import userAvatar from '../../assets/images/user-avatar.jpg'
 import { Link } from 'react-router-dom';
-import { AppRoute } from '../const';
+import { AppRoute } from '../../const';
 
 function PageHeader() {
   return (

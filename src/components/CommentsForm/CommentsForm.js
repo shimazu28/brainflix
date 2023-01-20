@@ -1,4 +1,4 @@
-import userAvatar from '../assets/images/user-avatar.jpg'
+import userAvatar from '../../assets/images/user-avatar.jpg'
 
 function CommentsForm() {
   return (

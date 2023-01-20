@@ -4,9 +4,9 @@
     border-right: 1px solid $mercury;
     margin-right: 2.4rem;
   }
-}
 
-.video-details__title {
+
+&__title {
   font-size: 2.4rem;
   font-weight: bold;
   margin: 0;
@@ -24,7 +24,7 @@
   }
 }
 
-.video-details__info {
+&__info {
   border-top: 1px solid $mercury;
   border-bottom: 1px solid $mercury;
   padding: 1.6rem 0;
@@ -145,7 +145,7 @@
   }
 }
 
-.video-details__description {
+&__description {
   font-size: 1.3rem;
   margin-top: 0;
   margin-bottom: 2.4rem;
@@ -159,4 +159,5 @@
     padding-right: 2.4rem;
     margin-bottom: 4rem;
   }
+}
 }
