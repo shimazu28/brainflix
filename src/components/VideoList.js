@@ -7,7 +7,7 @@ function VideoList({ videos, currentVideo }) {
 
       <ul className="videos__list">
         {videos.map((video) => {
-          if (video.id === currentVideo.id) {
+          if (video.id === currentVideo.id) {    
             return false;
           }
 
@@ -21,5 +21,5 @@ function VideoList({ videos, currentVideo }) {
     </aside>
   );
 }
-
+//  лайн тен мейкс щюр зет видео своп вен ви клик ту зе видеолист 
 export default VideoList;

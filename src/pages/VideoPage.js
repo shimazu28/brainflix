@@ -13,11 +13,11 @@ function VideoPage() {
   const [currentVideo, setCurrentVideo] = useState({});
 
   useEffect(() => {
-    if (videos.length === 0) {
+    if (videos.length === 0) {   
       axios.get('https://project-2-api.herokuapp.com/videos?api_key=d9321c15-a32c-46ab-a15d-07809df6aaef')
         .then((response) => {
           setVideos(response.data);
-          if (!videoID) {
+          if (videoID !== 0) {
             axios.get(`https://project-2-api.herokuapp.com/videos/${response.data[0].id}?api_key=d9321c15-a32c-46ab-a15d-07809df6aaef`)
               .then((response) => setCurrentVideo(response.data))
               .catch((err) => console.log(err));
@@ -32,7 +32,7 @@ function VideoPage() {
         .catch((err) => console.log(err));
     }
   }, [videoID, videos.length]);
-
+// лайн сихтин иф видеос ленгз из тру, ви муст ритурн лист оф информейщн ин некст видео лист
   return (
     <main className="video-page">
       <VideoPlayer video={currentVideo} />
@@ -45,5 +45,6 @@ function VideoPage() {
     </main>
   );
 }
-
+// лайн твени иф ви лод пейдж визоут айди ор слешс, ви шулд гет фирст видео айди фром со ит вилби зе байскл
+// лайн тв найн ви вон мейк щюр ту рендер пейдж вен ви чуз реквайрд видео айди кий
 export default VideoPage;

@@ -9,5 +9,5 @@ function VideoPlayer({ video }) {
     </div>
   );
 }
-
+//optional chaining ?
 export default VideoPlayer;
