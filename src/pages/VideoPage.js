@@ -4,6 +4,7 @@ import VideoList from '../components/VideoList/VideoList';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { ENDPOINT } from '../const';
 
 function VideoPage() {
   const params = useParams();
@@ -14,11 +15,12 @@ function VideoPage() {
 
   useEffect(() => {
     if (videos.length === 0) {   
-      axios.get('https://project-2-api.herokuapp.com/videos?api_key=d9321c15-a32c-46ab-a15d-07809df6aaef')
+      axios.get(ENDPOINT)
         .then((response) => {
+          console.log(response);
           setVideos(response.data);
           if (videoID !== 0) {
-            axios.get(`https://project-2-api.herokuapp.com/videos/${response.data[0].id}?api_key=d9321c15-a32c-46ab-a15d-07809df6aaef`)
+            axios.get(`${ENDPOINT}/${response.data[0].id}`)
               .then((response) => setCurrentVideo(response.data))
               .catch((err) => console.log(err));
           }
@@ -27,7 +29,7 @@ function VideoPage() {
     }
 
     if (videoID) {
-      axios.get(`https://project-2-api.herokuapp.com/videos/${videoID}?api_key=d9321c15-a32c-46ab-a15d-07809df6aaef`)
+      axios.get(`${ENDPOINT}/${videoID}`)
         .then((response) => setCurrentVideo(response.data))
         .catch((err) => console.log(err));
     }

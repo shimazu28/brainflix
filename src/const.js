@@ -12,4 +12,4 @@ export const API = {
 
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
-export const ENDPOINT = `${BASE_URL}`;
+export const ENDPOINT = `${BASE_URL}/videos`;
