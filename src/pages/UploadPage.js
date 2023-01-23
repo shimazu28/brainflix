@@ -1,7 +1,8 @@
-import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
-import uploadVideoPreview from '../assets/images/upload-video-preview.jpg';
-import { AppRoute } from '../const';
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import uploadVideoPreview from "../assets/images/upload-video-preview.jpg";
+import { AppRoute, ENDPOINT } from "../const";
 
 function UploadPage() {
   const navigate = useNavigate();
@@ -9,14 +10,31 @@ function UploadPage() {
   const handleFormSubmit = (evt) => {
     evt.preventDefault();
 
-    navigate(AppRoute.HOME);
-    toast.success('Video published successfully!');
-  };
+    const title = evt.target.title.value;
+    const description = evt.target.description.value;
+    console.log(title, description);
+    axios
+      .post(ENDPOINT, {
+        title,
+        description,
+        headers:{'Content-Type': 'application/json; charset=utf-8'}
+      })
+      .then(() => {
+        navigate(AppRoute.HOME);
+        toast.success("Video published successfully!");
+      })
+      .catch(() => {
+        alert(
+          "Something went wrong."
+        );
+      });
+    }
 
   const handleFormCancel = (evt) => {
     evt.preventDefault();
 
     navigate(AppRoute.HOME);
+    toast.info("Cancelled!");
   };
 
   return (
@@ -28,11 +46,9 @@ function UploadPage() {
           <div className="form__element">
             <label className="form__label form__label--file">
               Video thumbnail
-              <input className="visually-hidden"
-                type="file"
-                name="video"
-              />
-              <img className="form__image"
+              <input className="visually-hidden" type="file" name="video" />
+              <img
+                className="form__image"
                 src={uploadVideoPreview}
                 alt="upload pic"
               />
@@ -41,8 +57,11 @@ function UploadPage() {
 
           <div className="upload-page__form-right">
             <div className="form__element">
-              <label className="form__label" htmlFor="title">Title your video</label>
-              <input className="form__field"
+              <label className="form__label" htmlFor="title">
+                Title your video
+              </label>
+              <input
+                className="form__field"
                 name="title"
                 type="text"
                 placeholder="Add a title to your video"
@@ -51,8 +70,11 @@ function UploadPage() {
             </div>
 
             <div className="form__element">
-              <label className="form__label" htmlFor="description">Add a video description</label>
-              <textarea className="upload-page__description form__field form__field--text"
+              <label className="form__label" htmlFor="description">
+                Add a video description
+              </label>
+              <textarea
+                className="upload-page__description form__field form__field--text"
                 name="description"
                 cols="30"
                 rows="10"
@@ -64,13 +86,24 @@ function UploadPage() {
 
           <div className="form__buttons">
             <button className="form__submit button" type="submit">
-              <svg className="button__icon" height="24" width="24" fill="currentColor">
+              <svg
+                className="button__icon"
+                height="24"
+                width="24"
+                fill="currentColor"
+              >
                 <path d="M0 0h24v24H0V0z" fill="none" />
                 <path d="M5 5c0 .55.45 1 1 1h12c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1zm2.41 9H9v5c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-5h1.59c.89 0 1.34-1.08.71-1.71L12.71 7.7c-.39-.39-1.02-.39-1.41 0l-4.59 4.59c-.63.63-.19 1.71.7 1.71z" />
               </svg>
               Publish
             </button>
-            <button className="form__reset button button--inverse" type="reset" onClick={handleFormCancel}>Cancel</button>
+            <button
+              className="form__reset button button--inverse"
+              type="reset"
+              onClick={handleFormCancel}
+            >
+              Cancel
+            </button>
           </div>
         </form>
       </div>

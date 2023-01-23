@@ -17,7 +17,6 @@ function VideoPage() {
     if (videos.length === 0) {   
       axios.get(ENDPOINT)
         .then((response) => {
-          console.log(response);
           setVideos(response.data);
           if (videoID !== 0) {
             axios.get(`${ENDPOINT}/${response.data[0].id}`)
